@@ -37,13 +37,6 @@ class Player
     private $yearOld;
 
     /**
-     * @var string|null
-     *
-     * @ORM\Column(name="equip_id", type="string", length=9, nullable=true)
-     */
-    private $equipId;
-
-    /**
      * @ORM\ManyToOne(targetEntity=Equip::class, inversedBy="players")
      * @ORM\JoinColumn(nullable=false)
      */
@@ -78,17 +71,7 @@ class Player
         return $this;
     }
 
-    public function getEquipId(): ?string
-    {
-        return $this->equipId;
-    }
 
-    public function setEquipId(?string $equipId): self
-    {
-        $this->equipId = $equipId;
-
-        return $this;
-    }
 
     public function getEquip(): ?Equip
     {

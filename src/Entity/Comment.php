@@ -43,6 +43,7 @@ class Comment
      *
      * @ORM\Column(name="parent", type="integer", nullable=false)
      */
+    //auto incrémentation
     private $parent = '0';
 
     /**
