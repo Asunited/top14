@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Equip{% endblock %}
+
+{% block body %}
+    <h1>Equip</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ equip.id }}</td>
+            </tr>
+            <tr>
+                <th>Equip</th>
+                <td>{{ equip.equip }}</td>
+            </tr>
+            <tr>
+                <th>ShortName</th>
+                <td>{{ equip.shortName }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_equip_index') }}">back to list</a>
+
+    <a href="{{ path('app_equip_edit', {'id': equip.id}) }}">edit</a>
+
+    {{ include('equip/_delete_form.html.twig') }}
+{% endblock %}
